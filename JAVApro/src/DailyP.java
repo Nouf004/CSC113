@@ -1,13 +1,17 @@
 //subclass that count the salary
 public class DailyP extends Employee {
- private int NumOfD;
- public double getPaid(int num,double sal) {
-	 return num*sal;
- }//method getPaid
-@Override
-public double getPaid(double s) {
-	// TODO Auto-generated method stub
-	return NumOfD*s;
+private int day;
+public DailyP(String id,double A,int d) {
+	super(id,A);
+	day=d;
 }
+public double getPaid() {
+	if(day>30)
+		return day*100;
+	return day*60;
+}//method 
 
+public String toString() {
+	return super.toString()+"day equals"+day;
+}
 }//class

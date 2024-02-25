@@ -5,8 +5,9 @@ public class DailyP extends Employee {
 	 return num*sal;
  }//method getPaid
 @Override
-public double getPaid() {
-	
-	return 0;
+public double getPaid(double s) {
+	// TODO Auto-generated method stub
+	return NumOfD*s;
 }
+
 }//class

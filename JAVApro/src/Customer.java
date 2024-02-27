@@ -19,7 +19,7 @@ if( numOfCustomer < cList.length ){
   System.out.println("You have been added successfully");
 }
     else 
-    System.out.println(""); 
+    System.out.println("Sorry We Are Full"); 
 
 
 

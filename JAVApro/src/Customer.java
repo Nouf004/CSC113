@@ -20,9 +20,21 @@ if( numOfCustomer < cList.length ){
 }
     else 
     System.out.println("Sorry We Are Full"); 
-
-
-
   }//////
 
+  public String  discount( Char L ){
+   
+    switch ( L ){
+      case 'G' : case 'g' :
+     return " You have discount 50% " ; 
+        break;
+      case 'S' : case 's' :
+     return " You have discount 30% " ; 
+        break;
+      case 'B' : case 'b' :
+      return " You have discount 15% " ; 
+        break ;
+    }//switch
+
+  }/////
 }////class

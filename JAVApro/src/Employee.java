@@ -19,11 +19,14 @@ Elist=new int [50];
 public double getPaid() {
 return 0.0;
 }
+public double getAge() {
+	return age;}
 
 
-public void addEmployee() {
+
+public void addEmployee(Employee e) {
 	if(numOfE<Elist.length) {
-if(age>=18) {
+if(e.getAge()>=18) {
 	numOfE++;
 	System.out.println("You Have Been employed Succesfully ");}
 else 

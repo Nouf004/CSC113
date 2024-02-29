@@ -1,4 +1,3 @@
-
 public class Restaurant {
 private String nameOfRestaurant ;
 private int numOfR;//number of restaurant
@@ -20,7 +19,7 @@ public void SearchRestaurant (String name ){
   if ( Rlist[i].equalsIgnoreCase(name) ) 
     System.out.println("yes we Found it in section " +  (i+1) ); 
   else 
-    System.out.println("no we can*t find it  " ); 
+   
 
 
   

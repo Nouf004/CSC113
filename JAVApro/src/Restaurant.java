@@ -2,15 +2,15 @@
 public class Restaurant {
 private String nameOfRestaurant ;
 private int numOfR;//number of restaurant
-private Restaurant [] Rlist ; //////////////?
+////private Restaurant [] Rlist ; 
 private String [] Rlist ;
 
 
 public Restaurant( String name ){
 nameOfRestaurant =name;
 numOfR = 0 ;
-Rlist = new Restaurant[10] ; /////////?
-Rlist = new String [] = { "shiro sushi  " , "burgerizze" , "Shawarmer" , "ALbaik" , "Maestro Pizza"} ; 
+///Rlist = new Restaurant[10] ;
+Rlist = new String []{ "shiro sushi  " , "burgerizze" , "Shawarmer" , "ALbaik" , "Maestro Pizza"} ; 
 }///
 
 

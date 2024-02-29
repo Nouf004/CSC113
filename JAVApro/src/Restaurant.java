@@ -20,12 +20,10 @@ public void SearchRestaurant (String name ){
   if ( Rlist[i].equalsIgnoreCase(name) ) 
     System.out.println("yes we Found it in section " +  (i+1) ); 
   else 
-    System.out.println("yes we can*t Found it in section " ); 
+    System.out.println("yes we can*t Found it  " ); 
 
 
-
-
-
+  
 }////
   
 

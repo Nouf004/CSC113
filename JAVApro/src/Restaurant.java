@@ -13,12 +13,12 @@ Rlist = new String []{ "shiro sushi  " , "burgerizzer" , "Shawarmer" , "ALbaik" 
 }///
 
 
-public void SearchRestaurant (String name ){
+public int  SearchRestaurant (String name ){
 
   for ( int i =0 ; i < Rlist.length ; i++ )
   if ( Rlist[i].equalsIgnoreCase(name) ) 
-    System.out.println("yes we Found it in section " +  (i+1) ); 
-  else 
+  return (i+1) ;
+  return -1 ;
    
 
 

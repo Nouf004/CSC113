@@ -11,6 +11,13 @@ numOfR = 0 ;
 Rlist = new Restaurant[10] ;
 }///
 
+
+public void addRestaurant (){
+
+
+
+
+}////
   
 
 

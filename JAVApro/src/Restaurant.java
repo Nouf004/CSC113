@@ -1,14 +1,14 @@
 public class Restaurant {
 private String nameOfRestaurant ;
 private int numOfR;//number of restaurant
-////private Restaurant [] Rlist ; 
 private String [] Rlist ;
+private Customer [] tList ; 
 
 
 public Restaurant( String name ){
 nameOfRestaurant =name;
 numOfR = 0 ;
-///Rlist = new Restaurant[10] ;
+tlist = new Customer[10] ;
 Rlist = new String []{ "shiro sushi  " , "burgerizzer" , "Shawarmer" , "ALbaik" , "Maestro Pizza"} ; 
 }///
 

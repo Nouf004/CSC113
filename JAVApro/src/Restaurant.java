@@ -19,16 +19,10 @@ public int  SearchRestaurant (String name ){
   if ( Rlist[i].equalsIgnoreCase(name) ) 
   return (i+1) ;
   return -1 ;
-   
-
-
-  
 }////
+
   
 
-
-
-
-
+  
   
 }///class

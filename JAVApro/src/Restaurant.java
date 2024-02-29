@@ -10,7 +10,7 @@ public Restaurant( String name ){
 nameOfRestaurant =name;
 numOfR = 0 ;
 ///Rlist = new Restaurant[10] ;
-Rlist = new String []{ "shiro sushi  " , "burgerizze" , "Shawarmer" , "ALbaik" , "Maestro Pizza"} ; 
+Rlist = new String []{ "shiro sushi  " , "burgerizzer" , "Shawarmer" , "ALbaik" , "Maestro Pizza"} ; 
 }///
 
 
@@ -20,7 +20,7 @@ public void SearchRestaurant (String name ){
   if ( Rlist[i].equalsIgnoreCase(name) ) 
     System.out.println("yes we Found it in section " +  (i+1) ); 
   else 
-    System.out.println("yes we can*t Found it  " ); 
+    System.out.println("no we can*t find it  " ); 
 
 
   

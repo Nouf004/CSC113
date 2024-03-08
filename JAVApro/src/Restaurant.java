@@ -6,7 +6,6 @@ private String [] Rlist ;
 
 public Restaurant( String name  , int num){
 nameOfRestaurant =name;
-numberSection = num ;
 Rlist = new String []{ "shiro sushi  " , "burgerizzer" , "Shawarmer" , "ALbaik" , "Maestro Pizza"} ; 
 }///
 

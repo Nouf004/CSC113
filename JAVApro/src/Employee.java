@@ -41,6 +41,7 @@ public String toString() {
 	return "ID"+ID+"Age"+age+ "the slary"+getPaid();
 }
 
+
 }//class
 
 

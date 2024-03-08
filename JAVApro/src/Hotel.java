@@ -21,7 +21,7 @@ public class Hotel extends Carnival {
   return false;
  }
  
- public boolean addCustomer(Customer C) {
+ public boolean addCustomer(Customer c) {
  if(isFull()==false){
  CList[numOfCustomer++]= C;
   return true;

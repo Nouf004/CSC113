@@ -1,4 +1,8 @@
 
-public class Hotel {
+public class Hotel { 
+ private int days:;
+ private String email;
+ 
+  
 
 }

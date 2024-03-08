@@ -1,32 +1,36 @@
 
 public class Hotel extends Carnival { 
  private int days;
+ 
  private double coast;
- private numOfCustomer;
- private int num;
+ 
  private int check_inDay;
+ 
  private int check_outDay;
+ 
+private int numOfCustomer;
 
 
- public Hotel(int Days, String Email, String PN, double Coast, int checkIn, int checkOut ){
+
+
+ public Hotel(int Days, double Coast, int checkIn, int checkOut ){
  days=Days;
- email= Email;
- phoneNumber= PN;
  coast=Coast;
- numOfCustomer=0;
  check_inDay=checkIn;
  check_outDay=checkOut;
+ Clist=new Customer[300];
+ numOfCustomer=0;
  }
 
  public boolean isFull(){
- if(numOfCustomer==CList.length)
+ if(numOfCustomer==Clist.length)
   return true;
   return false;
  }
  
- public boolean addCustomer(Customer c , int num ) {
+ public boolean AddCustomer(Customer c,int num) {
  if(searchRoom(num)!=-1){
- CList[num-1]= C;
+ Clist[num-1]= c;
   numOfCustomer++;
   return true;
  }
@@ -36,7 +40,7 @@ public class Hotel extends Carnival {
  public int searchRoom(int num){
   if( Clist[num-1]==null)
    return num;
-   retrun -1;
+   return -1;
  }
 
  public void removeCustomer(int Rnum){

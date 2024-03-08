@@ -4,6 +4,7 @@ public class Hotel extends Carnival {
  private String email;
  private String phoneNumber;
  private double coast;
+ private numOfCustomer;
 
 
  public Hotel(int Days, String Email, String PN, double Coast ){
@@ -11,21 +12,24 @@ public class Hotel extends Carnival {
  email= Email;
  phoneNumber= PN;
  coast=Coast;
+  numOfCustomer=0;
  }
 
  public boolean isFull(){
- if(nOfR==RList.length)
+ if(numOfCustomer==CList.length)
   return true;
   return false;
  }
  
- public boolean addGuest(Customer C) {
+ public boolean addCustomer(Customer C) {
  if(isFull()==false){
- RList[nOfR++]= C;
+ CList[numOfCustomer++]= C;
   return true;
  }
   return false;
  } 
+
+ 
  
 
  

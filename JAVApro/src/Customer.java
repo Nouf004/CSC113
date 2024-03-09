@@ -1,17 +1,14 @@
 
 public class Customer {
 private int ID;
-//private int numOfCustomer;
+
 private char Level;
 
-//private Customer [] cList;
 
-  public Customer ( int id , char Level,String pn,String em ){
+  public Customer ( int id , char Level ){
     ID = id ;
     this.Level = Level ;
    
-  //  numOfCustomer = 0 ;
-   // cList = new Customer[300] ;
   }////
 
   
@@ -43,5 +40,13 @@ if( numOfCustomer < cList.length ){
 
   }/////
 
+public int getID() {
+	return ID;}
 
+public char getLevel(){
+	return Level;
+}
+public String toString() {
+	return "ID: "+ID+"\n Level:"+Level;
+}
 }////class

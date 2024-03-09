@@ -1,23 +1,19 @@
 
 public class Hotel extends Carnival { 
- private int days;
+// private int days;
  
- private double coast;
+//private double coast;
  
- private int check_inDay;
+ //private int check_inDay;
  
- private int check_outDay;
+ //private int check_outDay;
  
 private int numOfCustomer;
 
 
 
 
- public Hotel(int Days, double Coast, int checkIn, int checkOut ){
- days=Days;
- coast=Coast;
- check_inDay=checkIn;
- check_outDay=checkOut;
+ public Hotel(){
  Clist=new Customer[300];
  numOfCustomer=0;
  }
@@ -28,7 +24,7 @@ private int numOfCustomer;
   return false;
  }
  
- public boolean AddCustomer(Customer c,int num) {
+ public boolean AddRoom(Customer c,int num) {
  if(searchRoom(num)!=-1){
  Clist[num-1]= c;
   numOfCustomer++;
@@ -42,8 +38,14 @@ private int numOfCustomer;
    return num;
    return -1;
  }
+public double calculatePrice(int check_outDay,int check_inDay){
+  double total;
+  total=(check_outDay-check_inDay)*300;
+  return total;
+ 
+}
 
- public void removeCustomer(int Rnum){
+ public void removeRoom(int Rnum,int check_outDay,int check_inDay){
   int count=0;
   int duration= check_outDay-check_inDay;
   for(int i=0; i<duration; i++)

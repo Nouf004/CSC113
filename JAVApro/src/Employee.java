@@ -2,17 +2,12 @@
 public class Employee {
 protected String ID;
 protected double age;
-public int day;
-public double hour;
-private int Elist[];
-public int numOfE;
+
 ///////////////////////////method 
 
 public Employee(String id,double A) {
 ID=id;
 age=A;
-numOfE=0;
-Elist=new int [50];
 
 }//constructer
 
@@ -24,7 +19,7 @@ public double getAge() {
 
 
 
-public void addEmployee(Employee e) {
+/*public void addEmployee(Employee e) {
 	if(numOfE<Elist.length) {
 if(e.getAge()>=18) {
 	numOfE++;
@@ -35,7 +30,7 @@ else
 	else 
 		System.out.println("Sorry We Are Full Staffed");
 	
-}//addEmployee
+}//addEmployee*/
 		
 public String toString() {	
 	return "ID"+ID+"Age"+age+ "the slary"+getPaid();

@@ -1,14 +1,14 @@
 
 public class themePark {
-private String nameOfCity;
 public String[]cList;
-private int Score;
+//private int Score;
+Customer[]customerlist;
+private int numOfCustomer;
 
-public themePark(String nameOfCity,int Score ) {
-	this.nameOfCity=nameOfCity;
-	this.Score=Score;
+public themePark() {
 	cList=new String[]{"Italy","Japan","France","India","Riyadh"};
-
+	customerlist=new Customer[300];
+	numOfCustomer=0;
 }
 
 
@@ -35,6 +35,15 @@ public void prize(int numS) {
 				System.out.println("Congratulations you won 200K");
 }//numS=number of score
 
+ public void addCustomer(Customer C){
+if( numOfCustomer < customerlist.length ){
+	customerlist [ numOfCustomer++] =new Customer(C.getID(),C.getLevel());
+
+ System.out.println("You have been added successfully");
+}
+  else 
+   System.out.println("Sorry We Are Full"); 
+ }//////
 
 
 }

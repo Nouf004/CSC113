@@ -7,7 +7,7 @@ private int numOfEmployee;
 
 
 public Restaurant(){
-Rlist = new String []{ "shiro sushi  " , "burgerizzer" , "Shawarmer" , "ALbaik" , "Maestro Pizza"} ; 
+Rlist = new String []{ "Shiro" , "Burgerizzer" , "Shawarmer" , "ALbaik" , "Maestro"} ; 
 empList=new Employee[50];
 numOfEmployee=0;
 }///
@@ -51,7 +51,14 @@ else
 }//addEmployee
 
   
-
+  
+public  Employee [] employee(Employee [] em){
+Employee[] emlist=new Employee[numOfEmployee];
+int j=0;
+for(int i=0;i<numOfEmployee;i++)
+emlist[j++]=emlist[i];
+return emlist;
+}
   
   
 }///class

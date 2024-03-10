@@ -1,7 +1,7 @@
 
 public class themePark {
 public String[]cList;
-//private int Score;
+
 Customer[]customerlist;
 private int numOfCustomer;
 
@@ -12,15 +12,15 @@ public themePark() {
 }
 
 
-public String SearchNC(String name) {
+public int SearchNC(String name) {
 	
 	for(int i=0;i<cList.length;i++) 
 		
-if(cList[i].equals(name))
+if(cList[i].equalsIgnoreCase(name))
 	
-return "In gate number "+(i+1);
+return i;
 	
-	return "We Are Sorry There Is No City Called Like That";	
+	return -1;	
 }//NC=name of city
 
 
@@ -33,6 +33,9 @@ public void prize(int numS) {
 		else
 			if(numS<1000)
 				System.out.println("Congratulations you won 200K");
+            else 
+            System.out.println("We are sorry but you didn't win");
+            
 }//numS=number of score
 
  public void addCustomer(Customer C){
@@ -44,6 +47,24 @@ if( numOfCustomer < customerlist.length ){
   else 
    System.out.println("Sorry We Are Full"); 
  }//////
+ 
+ 
+ 
+public Customer [] ArrayOfCustomer(Customer[]c){
+Customer[] list=new Customer[numOfCustomer];
+int j=0;
+for(int i=0;i<numOfCustomer;i++)
+list[j++]=new Customer(list[i].getID(),list[i].getLevel());
+return list;
+}
 
+
+
+public String toString(){
+String str="";
+for(int i=0;i<numOfCustomer;i++)
+str="\n"+customerlist[i].toString();
+return str; 
+}//end of to string
 
 }

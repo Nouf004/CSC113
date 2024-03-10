@@ -1,7 +1,7 @@
 //subclass that count the salary
 public class DailyP extends Employee {
 private int day;
-public DailyP(String id,double A,int d) {
+public DailyP(String id,int A,int d) {
 	super(id,A);
 	day=d;
 }
@@ -12,6 +12,6 @@ public double getPaid() {
 }//method 
 
 public String toString() {
-	return super.toString()+"day equals"+day+"The salary is equals "+getPaid();
+	return super.toString()+"\n day equals="+day+"\n The salary is equals= "+getPaid();
 }//method toString
 }//class

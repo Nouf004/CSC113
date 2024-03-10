@@ -1,17 +1,7 @@
 
 public class Hotel extends Carnival { 
-// private int days;
- 
-//private double coast;
- 
- //private int check_inDay;
- 
- //private int check_outDay;
- 
+
 private int numOfCustomer;
-
-
-
 
  public Hotel(){
  Clist=new Customer[300];
@@ -38,12 +28,13 @@ private int numOfCustomer;
    return num;
    return -1;
  }
+ 
 public double calculatePrice(int check_outDay,int check_inDay){
   double total;
   total=(check_outDay-check_inDay)*300;
   return total;
- 
 }
+
 
  public void removeRoom(int Rnum,int check_outDay,int check_inDay){
   int count=0;
@@ -54,23 +45,13 @@ public double calculatePrice(int check_outDay,int check_inDay){
   Clist[Rnum-1]=null;
   numOfCustomer--;
  }
-   
-   
-
-  
-  
-   
-
  
+public Customer [] customerList(Customer[]c){
+Customer[] list=new Customer[numOfCustomer];
+int j=0;
+for(int i=0;i<numOfCustomer;i++)
+list[j++]=new Customer(list[i].getID(),list[i].getLevel());
+return list;
+}  
  
-
- 
-
- 
-
- 
- 
- 
-  
-
-}
+}//class

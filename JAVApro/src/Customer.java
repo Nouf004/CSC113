@@ -13,15 +13,7 @@ private char Level;
 
   
 
- /* public void addCustomer(Customer C){
-if( numOfCustomer < cList.length ){
-  cList [ numOfCustomer++] =C;
-  System.out.println("You have been added successfully");
-}
-    else 
-    System.out.println("Sorry We Are Full"); 
-  }//////
-*/
+
  
   
   

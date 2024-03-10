@@ -1,11 +1,11 @@
 //superClass
 public class Employee {
 protected String ID;
-protected double age;
+protected int age;
 
 ///////////////////////////method 
 
-public Employee(String id,double A) {
+public Employee(String id,int A) {
 ID=id;
 age=A;
 
@@ -14,29 +14,15 @@ age=A;
 public double getPaid() {
 return 0.0;
 }
-public double getAge() {
+public int getAge() {
 	return age;}
-
-
-
-/*public void addEmployee(Employee e) {
-	if(numOfE<Elist.length) {
-if(e.getAge()>=18) {
-	numOfE++;
-	System.out.println("You Have Been employed Succesfully ");}
-else 
-	System.out.println("Sorry Your Underage");
-	}
-	else 
-		System.out.println("Sorry We Are Full Staffed");
-	
-}//addEmployee*/
 		
 public String toString() {	
-	return "ID"+ID+"Age"+age+ "the slary"+getPaid();
+	return "\n ID="+ID+"\nAge="+age;
 }
 
 
 }//class
+
 
 

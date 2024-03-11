@@ -11,9 +11,6 @@ private char Level;
    
   }////
   
-  
-
-
 public int getID() {
 	return ID;}
 

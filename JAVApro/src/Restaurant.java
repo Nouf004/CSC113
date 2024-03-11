@@ -1,8 +1,8 @@
 public class Restaurant {
 //private String nameOfRestaurant ;
-private String [] Rlist ;
+public String [] Rlist ;//Restaurant List
  Employee [] empList;
-private int numOfEmployee;
+public int numOfEmployee;
  
 
 
@@ -37,28 +37,21 @@ int loc = SearchRestaurant (name ) ;
  
  
  
- public void addEmployee(Employee e) {
-	if(numOfEmployee<empList.length) {
+ public boolean addEmployee(Employee e) {
+	if(numOfEmployee<empList.length){
 if(e.getAge()>=18) {
 	empList[numOfEmployee++]=e;
-	System.out.println("You Have Been employed Succesfully ");}
-else 
-	System.out.println("Sorry Your Underage");
-	}
-	else 
-		System.out.println("Sorry We Are Full Staffed");
-	
+	return true;}
+	return false;}
+	 
+return false;	
 }//addEmployee
 
   
-  
-public  Employee [] employee(Employee [] em){
-Employee[] emlist=new Employee[numOfEmployee];
-int j=0;
-for(int i=0;i<numOfEmployee;i++)
-emlist[j++]=emlist[i];
-return emlist;
-}
-  
+  public String toString(){
+  String st="****Info of employee****"+"\n";
+  for(int i=0;i<numOfEmployee;i++)
+  st+=empList[i].toString();
+  return st;}
   
 }///class

@@ -1,5 +1,5 @@
 public class Restaurant {
-//private String nameOfRestaurant ;
+
 public String [] Rlist ;//Restaurant List
  Employee [] empList;
 public int numOfEmployee;
@@ -48,10 +48,10 @@ return false;
 }//addEmployee
 
   
-  public String toString(){
-  String st="****Info of employee****"+"\n";
+ public String toString(){
+  String st="";
   for(int i=0;i<numOfEmployee;i++)
-  st+=empList[i].toString();
+  st="\n"+empList[i].toString();
   return st;}
   
 }///class

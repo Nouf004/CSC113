@@ -6,8 +6,7 @@ int num;
 themePark City=new themePark();
 Restaurant R1=new Restaurant();
 Hotel CsHotel=new Hotel();
-Customer []cList=new Customer[300];//check about it
-int counterOfCustemer=0;
+
 
 do {
    System.out.println("********* Welcome to CS world *********");
@@ -25,19 +24,23 @@ do {
 	String IDemployee=in.next();
 	System.out.println("Enter your Age:");
 		int ageEmployee=in.nextInt();
-		
 		System.out.println("Do you want to participate as Daily Employee  enter 1 or Hourly Employee enter 2");
 		int choose=in.nextInt();
 		
 		switch(choose) {
 		
 		case 1:
+     
 			System.out.println("Enter the number of days you want to work:");
 			int days=in.nextInt();
 			Employee emD=new DailyP(IDemployee,ageEmployee,days);
 			R1.addEmployee(emD);
-			System.out.println("the salary going to be=\n"+emD.getPaid());
-			System.out.println(emD.toString());
+         if(R1.addEmployee(emD)){
+         System.out.println("You have been added successfully");
+			System.out.println(emD.toString());}
+         else
+         System.out.println("We are sorry you have been rejected");
+        
 			break;
 			
 		case 2:
@@ -59,16 +62,10 @@ do {
 			System.out.println("Enter your level weather it's Gold as G or Silver as S or Bronze as B");
 			char level=in.next().charAt(0);
          
-         //Customer[] customerlist=new Customer[300];
-         //for ( int i = 0 ; i < customerlist.length ; i++){
-         //customerlist[i] = new Customer(id,level);
-         //City.ArrayOfCustomer(customerlist[i]);}
-         //Customer cus1;
-         
-         cList[counterOfCustemer++]=new Customer(id,level);
-         
-		 //cus1=new Customer(id,level);
-			//City.addCustomer(cus1);
+         Customer c1=new Customer(id,level);
+         City.addCustomer(c1);
+        
+      
          
 			String answer;
       
@@ -157,9 +154,13 @@ do {
 				System.out.println("Enter number of the room that you want to check in:");
 				int numOfRoom=in.nextInt();
 				
-				if(CsHotel.AddRoom(cList[counterOfCustemer], numOfRoom)==true) {
+             for(int i=0;i<CsHotel.numOfRooms;i++)
+            if(CsHotel.Clist[i]==null)
+				if(CsHotel.searchRoom(numOfRoom)!=-1) {
+            CsHotel.AddRoom(City.customerlist[City.numOfCustomer], numOfRoom);
 					System.out.println("Congrats you have booked a room");
 					System.out.println("the total coast="+CsHotel.calculatePrice(date_Checkout, date_Chekin));
+               
 				}
 				else 
 					System.out.println("We are sorry there is no room available");
@@ -171,7 +172,7 @@ do {
             case 6://work on it
             System.out.println("*****Your Info*****");
 				System.out.println("==================");
-				System.out.println(cList[counterOfCustemer].toString());
+				System.out.println(City.customerlist[City.numOfCustomer].toString());
             break;
 			}//switch cus number
 				
@@ -196,7 +197,46 @@ do {
 	
 }while(num!=-1);//do while the first
 	
-   for(int i=0;i<counterOfCustemer;i++)
-   System.out.println(cList[i]);
+  for(int i=0;i<City.numOfCustomer;i++)
+   System.out.println(City.customerlist[i]);
+   
+   for(int i=0;i<R1.numOfEmployee;i++)
+   System.out.println(R1.empList[i]);
+   
 }//main
 }//class
+
+
+
+//Customer []cList=new Customer[300];//check about it
+//int counterOfCustemer=0;
+
+
+
+//  for(int i=0;i<counterOfCustemer;i++)
+   //System.out.println(cList[i]);
+
+ 
+         //Customer[] customerlist=new Customer[300];
+         //for ( int i = 0 ; i < customerlist.length ; i++){
+        // customerlist[i] = new Customer(id,level);
+         //City.ArrayOfCustomer(customerlist[i]);
+        // }
+         //Customer cus1;
+         
+        //cList[counterOfCustemer]=new Customer(id,level);
+        // City.addCustomer(cList[counterOfCustemer++]);
+		 //cus1=new Customer(id,level);
+			//City.addCustomer(cus1);
+         
+         
+         
+        // City.customerlist[City.numOfCustomer++]=new Customer(id,level);
+         //City.AddCustomer(
+
+         
+          //for(int i=0;i<City.customerlist.length;i++){
+        // City.numOfCustomer++;
+//}         
+         // cList[counterOfCustemer]=new Customer(id,level);
+        // City.addCustomer(cList[counterOfCustemer++]);

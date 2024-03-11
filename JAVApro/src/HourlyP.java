@@ -14,7 +14,7 @@ public double getPaid(){
 }
 
 public String toString() {
-	return super.toString()+"\nhour equals="+hour+"\nThe salary equals="+getPaid();
+	return super.toString()+"\nhour equals="+hour+",The salary equals="+getPaid();
 }//method toString
 
 }//class

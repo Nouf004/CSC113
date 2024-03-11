@@ -3,13 +3,11 @@
 public class Employee {
 protected String ID;
 protected int age;
-
-///////////////////////////method 
+////method 
 
 public Employee(String id,int A) {
 ID=id;
 age=A;
-
 }//constructer
 
 public double getPaid() {
@@ -24,6 +22,7 @@ public String toString() {
 
 
 }//class
+
 
 
 

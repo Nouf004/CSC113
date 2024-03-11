@@ -12,6 +12,7 @@ public double getPaid() {
 }//method 
 
 public String toString() {
-	return super.toString()+"\n day equals="+day+"\n The salary is equals= "+getPaid();
+	return super.toString()+"\n day equals="+day+", The salary is equals= "+getPaid();
 }//method toString
 }//class
+

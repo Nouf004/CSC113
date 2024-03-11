@@ -47,18 +47,6 @@ if( numOfCustomer < customerlist.length ){
   else 
    System.out.println("Sorry We Are Full"); 
  }//////
- 
- 
- 
-/*public Customer [] ArrayOfCustomer(Customer[]c){
-Customer[] list=new Customer[numOfCustomer];
-int j=0;
-for(int i=0;i<numOfCustomer;i++)
-list[j++]=new Customer(list[i].getID(),list[i].getLevel());
-return list;
-}*/
-
-
 
 public String toString(){
 String str="";

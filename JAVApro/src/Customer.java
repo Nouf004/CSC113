@@ -10,27 +10,9 @@ private char Level;
     this.Level = Level ;
    
   }////
-
-  
-
-
- 
   
   
-  public void  discount( char L ){
-   
-    switch ( L ){
-      case 'G' : case 'g' :
-     System.out.println( " You have discount 50% ") ; 
-	case 'S' : case 's' :
-		System.out.println( " You have discount 30% ") ; 
-	case 'B' : case 'b' :
-		System.out.println( " You have discount 15% ") ;
-		default:
-		System.out.println("Sorry you don't have discount");
-    }//switch
 
-  }/////
 
 public int getID() {
 	return ID;}
@@ -39,6 +21,9 @@ public char getLevel(){
 	return Level;
 }
 public String toString() {
-	return "ID: "+ID+"\n Level:"+Level;
+String str="****Info of Customer**** \n";
+   str+="ID: "+ID+", Level:"+Level+"\n";
+   return str;
 }
+
 }////class

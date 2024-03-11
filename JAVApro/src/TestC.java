@@ -24,6 +24,8 @@ do {
 	String IDemployee=in.next();
 	System.out.println("Enter your Age:");
 		int ageEmployee=in.nextInt();
+     
+
 		System.out.println("Do you want to participate as Daily Employee  enter 1 or Hourly Employee enter 2");
 		int choose=in.nextInt();
 		
@@ -48,8 +50,12 @@ do {
 			double hours=in.nextDouble();
 			Employee emH=new HourlyP(IDemployee,ageEmployee,hours);
 			R1.addEmployee(emH);
-			System.out.println("the salary going to be=\n"+emH.getPaid());
-			System.out.println(emH.toString());
+         
+         if(R1.addEmployee(emH)){
+         System.out.println("You have been added successfully");
+			System.out.println(emH.toString());}
+         else
+         System.out.println("We are sorry you have been rejected");
 			break;
 			
 		}//Switch case for hour and day employee work
@@ -114,7 +120,6 @@ do {
 				case 3:
 					System.out.println("Enter the name of the Restaurant:");
 					String nameOfRestaurant=in.next();
-					//R1.SearchRestaurant(nameOfRestaurant);
                int loc=R1.SearchRestaurant(nameOfRestaurant);
                if(loc!=-1)
                System.out.println("The Restaurant is in gate :"+(loc+1));
@@ -196,47 +201,14 @@ do {
 	}//first switch 
 	
 }while(num!=-1);//do while the first
-	
-  for(int i=0;i<City.numOfCustomer;i++)
-   System.out.println(City.customerlist[i]);
+
+  for(int i=0;i<City.numOfCustomer;i++){
+   System.out.println(City.customerlist[i]);}
    
-   for(int i=0;i<R1.numOfEmployee;i++)
-   System.out.println(R1.empList[i]);
-   
-}//main
-}//class
-
-
-
-//Customer []cList=new Customer[300];//check about it
-//int counterOfCustemer=0;
-
-
-
-//  for(int i=0;i<counterOfCustemer;i++)
-   //System.out.println(cList[i]);
-
+  System.out.println("==========================");
  
-         //Customer[] customerlist=new Customer[300];
-         //for ( int i = 0 ; i < customerlist.length ; i++){
-        // customerlist[i] = new Customer(id,level);
-         //City.ArrayOfCustomer(customerlist[i]);
-        // }
-         //Customer cus1;
-         
-        //cList[counterOfCustemer]=new Customer(id,level);
-        // City.addCustomer(cList[counterOfCustemer++]);
-		 //cus1=new Customer(id,level);
-			//City.addCustomer(cus1);
-         
-         
-         
-        // City.customerlist[City.numOfCustomer++]=new Customer(id,level);
-         //City.AddCustomer(
-
-         
-          //for(int i=0;i<City.customerlist.length;i++){
-        // City.numOfCustomer++;
-//}         
-         // cList[counterOfCustemer]=new Customer(id,level);
-        // City.addCustomer(cList[counterOfCustemer++]);
+   for(int i=0;i<R1.numOfEmployee;i++){
+ System.out.println(R1.empList[i]);}
+// System.out.println(R1.toString());
+}//main 
+}//class

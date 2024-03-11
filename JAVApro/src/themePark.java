@@ -1,12 +1,12 @@
 
 public class themePark {
-public String[]cList;
+public String[]CityList;
 
 Customer[]customerlist;
-private int numOfCustomer;
+public int numOfCustomer;
 
 public themePark() {
-	cList=new String[]{"Italy","Japan","France","India","Riyadh"};
+	CityList=new String[]{"Italy","Japan","France","India","Riyadh"};
 	customerlist=new Customer[300];
 	numOfCustomer=0;
 }
@@ -14,9 +14,9 @@ public themePark() {
 
 public int SearchNC(String name) {
 	
-	for(int i=0;i<cList.length;i++) 
+	for(int i=0;i<CityList.length;i++) 
 		
-if(cList[i].equalsIgnoreCase(name))
+if(CityList[i].equalsIgnoreCase(name))
 	
 return i;
 	
@@ -50,13 +50,13 @@ if( numOfCustomer < customerlist.length ){
  
  
  
-public Customer [] ArrayOfCustomer(Customer[]c){
+/*public Customer [] ArrayOfCustomer(Customer[]c){
 Customer[] list=new Customer[numOfCustomer];
 int j=0;
 for(int i=0;i<numOfCustomer;i++)
 list[j++]=new Customer(list[i].getID(),list[i].getLevel());
 return list;
-}
+}*/
 
 
 

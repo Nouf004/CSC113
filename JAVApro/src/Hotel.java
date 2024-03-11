@@ -45,13 +45,5 @@ public double calculatePrice(int check_outDay,int check_inDay){
   Clist[Rnum-1]=null;
   numOfRooms--;
  }
- 
-/*public Customer [] customerList(Customer[]c){
-Customer[] list=new Customer[numOfCustomer];
-int j=0;
-for(int i=0;i<numOfCustomer;i++)
-list[j++]=new Customer(list[i].getID(),list[i].getLevel());
-return list;
-}*/  
- 
+  
 }//class

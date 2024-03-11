@@ -1,6 +1,6 @@
 
 public abstract class Carnival {
-protected Customer [] Clist;
+public Customer [] Clist;
 protected int num;
 
 public Carnival() {

@@ -1,15 +1,18 @@
 public class Restaurant {
-
 public String [] Rlist ;//Restaurant List
- Employee [] empList;
-public int numOfEmployee;
- 
+ DailyP[]dEmpList;
+public int numOfEmployeeD;//Daily
+ public int numOfEmployeeH;//Hourly
+ HourlyP[]hEmpList;
 
 
 public Restaurant(){
 Rlist = new String []{ "Shiro" , "Burgerizzer" , "Shawarmer" , "ALbaik" , "Maestro"} ; 
-empList=new Employee[50];
-numOfEmployee=0;
+dEmpList=new DailyP[50];
+numOfEmployeeD=0;
+hEmpList=new HourlyP[50];
+numOfEmployeeH=0;
+
 }///
 
 
@@ -22,9 +25,7 @@ public int SearchRestaurant (String name ){
 }////
 
  public boolean removeRestaurant( String name ) {
-
-int loc = SearchRestaurant (name ) ;
-
+   int loc = SearchRestaurant (name ) ;
    if ( loc != -1 )
    {
      Rlist[loc] = Rlist[ Rlist.length -1 ];
@@ -36,22 +37,32 @@ int loc = SearchRestaurant (name ) ;
  }////
  
  
- 
- public boolean addEmployee(Employee e) {
-	if(numOfEmployee<empList.length){
-if(e.getAge()>=18) {
-	empList[numOfEmployee++]=e;
-	return true;}
-	return false;}
-	 
-return false;	
-}//addEmployee
 
+
+public boolean AddEmployeeD(DailyP emD){
+	if(numOfEmployeeD<dEmpList.length && emD.getAge()>18){
+dEmpList[numOfEmployeeD++]=emD;
+return true;}
+return false;}//AddEmployeeDailyPaid
+
+public boolean AddEmployeeH(HourlyP emH){
+	if(numOfEmployeeH<hEmpList.length && emH.getAge()>18){
+hEmpList[numOfEmployeeH++]=emH;
+return true;}
+return false;}//AddEmployeeHourlyPaid
+
+
+  public void disPlayEmployeeH(){
+  System.out.println("****Hourly Employee Info****");
+  for(int i =0;i<numOfEmployeeH;i++)
+  System.out.println(hEmpList[i]);
+  }
   
- public String toString(){
-  String st="";
-  for(int i=0;i<numOfEmployee;i++)
-  st="\n"+empList[i].toString();
-  return st;}
+    public void disPlayEmployeeD(){
+  System.out.println("****Daily Employee Info****");
+  for(int i =0;i<numOfEmployeeD;i++)
+  System.out.println(dEmpList[i]);
+  }
+
   
 }///class

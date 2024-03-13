@@ -1,4 +1,4 @@
-public class Restaurant {
+public class Restaurant extends themePark {
 public String [] Rlist ;//Restaurant List
  DailyP[]dEmpList;
 public int numOfEmployeeD;//Daily
@@ -62,7 +62,11 @@ return false;}//AddEmployeeHourlyPaid
   System.out.println("****Daily Employee Info****");
   for(int i =0;i<numOfEmployeeD;i++)
   System.out.println(dEmpList[i]);
-  }
+  } 
+
+public void appUserCount(){
+System.out.println("the number of customers is"+numOfCustomers+"the number of Hourly Employees is"+numOfEmployeeH+"the number of Daily Employees is+"numOfEmployeeD);
+}
 
   
 }///class

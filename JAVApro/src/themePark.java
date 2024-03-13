@@ -41,12 +41,13 @@ public void prize(int numS) {
  public void addCustomer(Customer C){
 if( numOfCustomer < customerlist.length ){
 	customerlist [ numOfCustomer++] =new Customer(C.getID(),C.getLevel());
-
  System.out.println("You have been added successfully");
 }
   else 
    System.out.println("Sorry We Are Full"); 
  }//////
+
+
 
 public String toString(){
 String str="";

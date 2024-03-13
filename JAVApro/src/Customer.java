@@ -17,6 +17,7 @@ public int getID() {
 public char getLevel(){
 	return Level;
 }
+
 public String toString() {
 String str="****Info of Customer**** \n";
    str+="ID: "+ID+", Level:"+Level+"\n";

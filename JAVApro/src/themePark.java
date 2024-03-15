@@ -29,7 +29,7 @@ public void prize(int numS) {
 		System.out.println("Congratulations, you won Car");
 	else
 		if(numS>1000&&numS<1500)
-			System.out.println("Congratulations you won a trip to London");
+			System.out.println("Congratulations, you won a trip to London");
 		else
 			if(numS<1000)
 				System.out.println("Congratulations, you won 200K");

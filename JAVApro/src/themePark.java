@@ -26,15 +26,15 @@ return i;
 
 public void prize(int numS) {
 	if(numS>1500)
-		System.out.println("Congratulations you won Car");
+		System.out.println("Congratulations, you won Car");
 	else
 		if(numS>1000&&numS<1500)
-			System.out.println("Congratulations you won London");
+			System.out.println("Congratulations you won a trip to London");
 		else
 			if(numS<1000)
-				System.out.println("Congratulations you won 200K");
+				System.out.println("Congratulations, you won 200K");
             else 
-            System.out.println("We are sorry but you didn't win");
+            System.out.println("We are sorry, but you didn't win");
             
 }//numS=number of score
 

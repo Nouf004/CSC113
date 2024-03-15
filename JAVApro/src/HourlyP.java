@@ -22,3 +22,4 @@ this.hour=hour;
    public double getHour(){
       return hour;}
 }//class
+

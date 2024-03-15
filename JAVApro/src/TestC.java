@@ -53,7 +53,7 @@ public class TestC {
                                        
                      if(R1.AddEmployeeH(emH))
                         System.out.println("You have been added successfully");
-                  
+                     
                      
                      else
                         System.out.println("We are sorry you have been rejected");
@@ -70,7 +70,7 @@ public class TestC {
                char level=in.next().charAt(0);
             
                Customer c1=new Customer(id,level);
-               City.addCustomer(c1);
+               if(City.addCustomer(c1)){
             
             
             
@@ -88,7 +88,7 @@ public class TestC {
                System.out.println("6-Do you want to Display your info?");
             
                System.out.println("7-Do you want to cancel your booking in the Hotel?");
-
+            
                System.out.println("enter 0 if you don't have anything to do.");
                number=in.nextInt();
              
@@ -101,7 +101,7 @@ public class TestC {
                      
                         City.prize(numOfScore);                       
                         
-                         break;
+                        break;
                   
                      case 2:
                         String nameOfCity;
@@ -158,11 +158,11 @@ public class TestC {
                         
                            System.out.println("Enter the number of the room that you want to check in:");
                            int numOfRoom = in.nextInt();
-         
-                              if (CsHotel.AddRoom(CsHotel.Clist[CsHotel.CounterOfRoooms])) 
-                                 System.out.println("Congrats, you have booked a room");
-                                 System.out.println("The total cost = " + CsHotel.calculatePrice(date_Checkout, date_Checkin));
-                           }
+                        
+                           if (CsHotel.AddRoom(CsHotel.Clist[CsHotel.CounterOfRoooms])) 
+                              System.out.println("Congrats, you have booked a room");
+                           System.out.println("The total cost = " + CsHotel.calculatePrice(date_Checkout, date_Checkin));
+                        }
                           
                         
                         break;
@@ -170,22 +170,22 @@ public class TestC {
                      case 6:
                      
                         System.out.println("*****Your Info*****");
-                        System.out.println("==================");
                         System.out.println(c1.toString());
+                        System.out.println("==================");
                         break;
                         
-                        case 7:
+                     case 7:
                         System.out.println("***Enter your booking date***");
                         System.out.println("Date Check in:");
                         int dateCheck_in=in.nextInt();
                         
                         System.out.println("Date Check out:");
                         int dateCheck_out=in.nextInt();
-
+                     
                         if(CsHotel.removeRoom(dateCheck_out,dateCheck_in))
-                        System.out.println("You booking has been canceled");
+                           System.out.println("Your booking has been canceled");
                         else
-                        System.out.println("We are sorry but you can't cancel your bookin duo to our policy");
+                           System.out.println("We are sorry but you can't cancel your bookin duo to our policy");
                         
                   }//switch cus number
                
@@ -202,25 +202,33 @@ public class TestC {
                   System.out.println("6-Do you want to Display your info?");
                
                   System.out.println("7-Do you want to cancel your booking in the Hotel?");
-
+               
                   System.out.println("enter 0 if you don't have anything to do.");
                   number=in.nextInt();
                
                }//while
+         }
+         else 
+         System.out.println("Sorry but we are full today come next time to have fun");
          
          }//first switch 
       
       }while(num!=-1);//do while the first
       
-     System.out.println("***Now we are going to display all info***");
+      System.out.println("Now we are going to display all info");
+      System.out.println();
       
+   System.out.println("****Info of Customers**** ");
       for(int i=0;i<City.numOfCustomer;i++){
          System.out.println(City.customerlist[i]);}
-   
       System.out.println("==========================");
    
-        R1.disPlayEmployeeH();
-        R1.disPlayEmployeeD();
-
+      R1.disPlayEmployeeH();
+      System.out.println();
+      R1.disPlayEmployeeD();
+      System.out.println();
+    System.out.println("The CS World Materials"); 
+      R1.appInfo();
+   
    }//main 
 }//class

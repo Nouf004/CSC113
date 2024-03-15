@@ -26,7 +26,7 @@ public class TestC {
                int ageEmployee=in.nextInt();
             
             
-               System.out.println("Do you want to participate as Daily Employee  enter 1 or Hourly Employee enter 2");
+               System.out.println("Enter 1 if you want to participate as Daily Employee or 2 if you want to participate as Hourly Employee");
                int choose=in.nextInt();
             
                switch(choose) {
@@ -42,7 +42,7 @@ public class TestC {
                      
                      }
                      else
-                        System.out.println("We are sorry you have been rejected");
+                        System.out.println("We are sorry, you have been rejected");
                   
                      break;
                
@@ -56,7 +56,7 @@ public class TestC {
                      
                      
                      else
-                        System.out.println("We are sorry you have been rejected");
+                        System.out.println("We are sorry, you have been rejected");
                      break;
                
                }//Switch case for hour and day employee work
@@ -64,7 +64,7 @@ public class TestC {
                break;
             case 2:
             
-               System.out.println("Enter your ID pleas:");
+               System.out.println("Enter your ID please:");
                int id=in.nextInt();
                System.out.println("Enter your level weather it's Gold as G or Silver as S or Bronze as B");
                char level=in.next().charAt(0);
@@ -83,11 +83,11 @@ public class TestC {
             
                System.out.println("4-Do you have any complaints about any Restaurant?");
             
-               System.out.println("5-Do you want to have a book a room ?");
+               System.out.println("5-Do you want to book a room ?");
             
                System.out.println("6-Do you want to Display your info?");
             
-               System.out.println("7-Do you want to cancel your booking in the Hotel?");
+               System.out.println("7-Do you want to cancel your booking at the Hotel?");
             
                System.out.println("enter 0 if you don't have anything to do.");
                number=in.nextInt();
@@ -116,7 +116,7 @@ public class TestC {
                            System.out.println("The place is at section:"+(place+1));
                         
                         else 
-                           System.out.println("There is no city called like this.");
+                           System.out.println("Sorry , There is no city called like this.");
                         break;
                   
                      case 3:
@@ -125,7 +125,7 @@ public class TestC {
                         int loc=R1.SearchRestaurant(nameOfRestaurant);
                         if(loc!=-1)
                            System.out.println("The Restaurant is in gate :"+(loc+1));
-                        else System.out.println("There is no Restaurant called like this.");
+                        else System.out.println("Sorry , There is no Restaurant called like this.");
                      
                         break;
                   
@@ -142,13 +142,13 @@ public class TestC {
                            System.out.println("We have listend to your request.");
                         else 
                         
-                           System.out.println("You might misspelled the name, check again");
+                           System.out.println("You might have misspelled the name. please, check again");
                         break;
                   
                   
                      case 5:
                         if(CsHotel.isFull())
-                           System.out.println("Sorry, you can't book in this CS Hotel");
+                           System.out.println("Sorry, you can't book in CS Hotel");
                         else {
                            System.out.println("***Please enter the dates***");
                            System.out.println(" Check in:");
@@ -176,16 +176,16 @@ public class TestC {
                         
                      case 7:
                         System.out.println("***Enter your booking date***");
-                        System.out.println("Date Check in:");
+                        System.out.println("Check in Date:");
                         int dateCheck_in=in.nextInt();
                         
-                        System.out.println("Date Check out:");
+                        System.out.println("Check out Date:");
                         int dateCheck_out=in.nextInt();
                      
                         if(CsHotel.removeRoom(dateCheck_out,dateCheck_in))
                            System.out.println("Your booking has been canceled");
                         else
-                           System.out.println("We are sorry but you can't cancel your bookin duo to our policy");
+                           System.out.println("We are sorry, but you can't cancel your booking due to our policy");
                         
                   }//switch cus number
                
@@ -201,7 +201,7 @@ public class TestC {
                
                   System.out.println("6-Do you want to Display your info?");
                
-                  System.out.println("7-Do you want to cancel your booking in the Hotel?");
+                  System.out.println("7-Do you want to cancel your booking at the Hotel?");
                
                   System.out.println("enter 0 if you don't have anything to do.");
                   number=in.nextInt();
@@ -209,7 +209,7 @@ public class TestC {
                }//while
          }
          else 
-         System.out.println("Sorry but we are full today come next time to have fun");
+         System.out.println("Sorry, but we are full today make sure to come again next time to have some fun!");
          
          }//first switch 
       

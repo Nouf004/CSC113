@@ -56,6 +56,4 @@ str="\n"+customerlist[i].toString();
 return str; 
 }//end of to string
 
-public int printNumberOfCustomer(){
-return numOfCustomer;}
 }

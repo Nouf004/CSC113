@@ -158,18 +158,33 @@ public class TestC {
                            if(CsHotel.isFull())
                               System.out.println("Sorry, you can't book in this CS Hotel");
                            else {
+                             int date_Checkin;
+                               int date_Checkout;
+                           boolean answer=true;
+                           while(answer){
+                          try{
                               System.out.println("***Please enter the dates***");
                               System.out.println(" Check in:");
-                              int date_Checkin = in.nextInt();
-                              System.out.println("Check out:");
-                              int date_Checkout = in.nextInt();
+                           date_Checkin = in.nextInt();
+                           if(date_Checkin<1 || date_Checkin>31)
+                           throw new MyException ("Error you have entered invalid date");
                            
+                              System.out.println("Check out:");
+                            date_Checkout = in.nextInt();
+                        
                               System.out.println("Enter the number of the room that you want to check in:");
                               int numOfRoom = in.nextInt();
                            
                               if (CsHotel.AddRoom(CsHotel.Clist[CsHotel.CounterOfRoooms])) 
                                  System.out.println("Congrats, you have booked a room");
                               System.out.println("The total cost = " + CsHotel.calculatePrice(date_Checkout, date_Checkin));
+                              answer=false;
+                           }//try
+                          catch(MyException e){
+                          System.out.println(e.getMessage()+" you must enter it correctly");
+                        
+                          }//catch user defind
+                          }//while
                            }
                           
                         

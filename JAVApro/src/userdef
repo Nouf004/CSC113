@@ -4,4 +4,3 @@ public MyException(String str){
 super(str);
 }
 }
-

@@ -1,6 +1,11 @@
+import java.io.*;
 import java.util.*;
 public class TestC {
    public static void main(String []args) {
+   try {
+            FileWriter fileWriter = new FileWriter("output.txt");
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+
       Scanner in=new Scanner(System.in);
       int num;
       themePark City=new themePark();
@@ -245,6 +250,12 @@ public class TestC {
          }//first switch 
       
       }while(num!=-1);//do while the first
+      printWriter.println("********* Welcome to CS world *********");
+      
+         printWriter.println("The CS World Materials"); 
+
+           printWriter.println(R1.toString());
+      
       
       System.out.println("Now we are going to display all info");
       System.out.println();
@@ -258,8 +269,14 @@ public class TestC {
       System.out.println();
       R1.disPlayEmployeeD();
       System.out.println();
-      System.out.println("The CS World Materials"); 
-      R1.appInfo();
-   
-   }//main 
+           
+      
+        printWriter.close();
+            System.out.println("Data has been written to the file.");
+   }//tryfile
+   catch (IOException e) {
+            System.out.println("An error occurred while writing to the file: " + e.getMessage());
+        } 
+   }//main
+    
 }//class

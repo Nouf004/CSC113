@@ -1,0 +1,37 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+class app extends JFrame{
+   private static final int frame_width=400;
+   private static final int frame_height=500;
+   private static final int frame_x_origin=150;
+   private static final int frame_y_origin=250;
+
+   private JButton cancelButton;
+   private JButton okButton;
+
+   public static void main(String []args){
+      app frame=new app();
+      frame.setVisible(true);
+   }
+   public app(){
+      Container contentPane=getContentPane();
+      contentPane.setLayout(new FlowLayout());
+   
+      setSize(frame_width,frame_height);
+      setResizable(false);
+      setTitle("********* Welcome to CS world *********");
+      setLocation(frame_x_origin,frame_y_origin);
+   
+      okButton=new JButton("OK");
+      contentPane.add(okButton);
+   
+      cancelButton=new JButton("CANCEL");
+      contentPane.add(cancelButton);
+   
+      setDefaultCloseOperation(EXIT_ON_CLOSE);
+   
+   }//constructer
+
+}

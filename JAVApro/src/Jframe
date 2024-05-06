@@ -1,0 +1,15 @@
+import javax.swing.*;
+class Jframe{
+public static void main(String[]args){
+JFrame jFrame;
+
+jFrame=new JFrame();
+jFrame.setSize(500,400);
+jFrame.setVisible(true);
+
+//JOptionPane.showMessageDialog(jFrame,"********* Welcome to CS world *********");
+
+//JOptionPane.showMessageDialog(jFrame,  "Choose the following options:");
+
+}
+}

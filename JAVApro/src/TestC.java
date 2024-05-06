@@ -262,15 +262,15 @@ public class TestC {
          for(int i=0 ; i<R1.numOfEmployeeD;i++)
             printWriter.println(R1.dEmpList[i].toString()+"\n ");
       
-      printWriter.println("****Hourly Employee Info****");
-       for(int i=0 ; i<R1.numOfEmployeeH;i++)
+         printWriter.println("****Hourly Employee Info****");
+         for(int i=0 ; i<R1.numOfEmployeeH;i++)
             printWriter.println(R1.hEmpList[i].toString()+"\n ");
             
          printWriter.println("The CS World Materials");
           
-       printWriter.println("Now we are going to display all info");
+         printWriter.println("Now we are going to display all info");
       
-
+      
          printWriter.println(R1.toString());
       
          printWriter.close();

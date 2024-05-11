@@ -1,29 +1,43 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
 import java.io.*;
 import java.util.*;
-public class TestC {
-   public static void main(String []args) {
+public class TestC{
+   public static void main(String []args){
       try {
-         FileWriter fileWriter = new FileWriter("output.txt");
-         PrintWriter printWriter = new PrintWriter(fileWriter);
+         File fileWriter = new File("output.txt");
+         FileOutputStream sf=new FileOutputStream(fileWriter);
+         PrintWriter printWriter = new PrintWriter(sf);
+         
+         App csApp = new App();
+         FinalApp shutDown=new FinalApp();
       
          Scanner in=new Scanner(System.in);
          int num;
          themePark City=new themePark();
          Restaurant R1=new Restaurant();
          Hotel CsHotel=new Hotel();
-      
+         int numb;
+         csApp.setVisible(true);
+         
+         while(csApp.getInput()==null){
+            try{
+               Thread.sleep(100);
+            }//try sleep
+               
+            catch(InterruptedException e){
+               
+            }
+         }
+         numb = Integer.parseInt(csApp.getInput());
+                                                  
+         
       
          do {
-            System.out.println("********* Welcome to CS world *********");
-            System.out.println("Choose the following options:");
-            System.out.println("==============================");
-            System.out.println("1-Do you want to enter as an employee?");
-            System.out.println("2-Do you want to enter as an Customer?");
-            System.out.println("3-Enter -1 to log out from the application");
-         
-            num=in.nextInt();
-         
-            switch(num) {
+                     
+            switch(numb) {
                case 1:
                   System.out.println("Enter your ID:");
                   String IDemployee=in.next();
@@ -167,6 +181,7 @@ public class TestC {
                                        int date_Checkout;
                                        boolean answer=true;
                                        while(answer){
+                                       
                                           try{
                                              System.out.println("***Please enter the dates***");
                                              System.out.println(" Check in:");
@@ -184,11 +199,13 @@ public class TestC {
                                                 System.out.println("Congrats, you have booked a room");
                                              System.out.println("The total cost = " + CsHotel.calculatePrice(date_Checkout, date_Checkin));
                                              answer=false;
-                                          }//try
+                                          }//try  when the user enters wrong dates 
+                                          
                                           catch(MyException e){
                                              System.out.println(e.getMessage()+" you must enter it correctly");
                                           
-                                          }//catch user defind
+                                          }//catch user defind it will give the user a message based on what they did wrong
+                                          
                                        }//while
                                     }
                                  
@@ -239,17 +256,50 @@ public class TestC {
                         }
                         else 
                            System.out.println("Sorry but we are full today come next time to have fun");
-                     }//try
+                            
+                     }//try to catch if the usere missed matching the input that they should have done
                      catch(InputMismatchException e1){
                         String str=in.next();
                         System.out.println("Mismatching the input "+ " " +str+" please enter it again");
-                     }//catch
+                     }//catch the missmatching input that the user puts
                   
                   }//while loop for the exception
                   
             }//first switch 
+            csApp.dispose();
          
-         }while(num!=-1);//do while the first
+            System.out.println("********* Welcome to CS world *********");
+            System.out.println("Choose the following options:");
+            System.out.println("==============================");
+            System.out.println("1-Do you want to enter as an employee?");
+            System.out.println("2-Do you want to enter as an Customer?");
+            System.out.println("3-Enter -1 to log out from the application");
+            numb = Integer.parseInt(in.next());
+           
+            shutDown.setVisible(shutDown.setIn(numb));
+                       
+            shutDown.setTextTitel("****Info of Customers**** "+"\n");
+            String str="";
+            for(int i=0;i<City.numOfCustomer;i++)
+               str+= City.customerlist[i].toString();
+            shutDown.setTextCus(str);
+            shutDown.setTextTitel2("****Daily Employee Info****");
+            for(int i=0 ; i<R1.numOfEmployeeD;i++)
+               shutDown.setTextEmD(R1.dEmpList[i].toString()+"\n ");
+         
+            shutDown.setTextTitel3("****Hourly Employee Info****");
+            for(int i=0 ; i<R1.numOfEmployeeH;i++)
+               shutDown.setTextEmH(R1.hEmpList[i].toString()+"\n ");
+            
+            shutDown.setTextEnding1("The CS World Materials");
+          
+            shutDown.setTextEnding2("Now we are going to display all info");
+         
+         
+            shutDown.setTextAllInfo(R1.toString());
+        
+         
+         }while(numb!=-1);//do while the first
          
          printWriter.println("********* Welcome to CS world *********");
       
@@ -262,10 +312,14 @@ public class TestC {
          for(int i=0 ; i<R1.numOfEmployeeD;i++)
             printWriter.println(R1.dEmpList[i].toString()+"\n ");
       
+         printWriter.println("==========================");
+      
          printWriter.println("****Hourly Employee Info****");
          for(int i=0 ; i<R1.numOfEmployeeH;i++)
             printWriter.println(R1.hEmpList[i].toString()+"\n ");
             
+         printWriter.println("==========================");
+      
          printWriter.println("The CS World Materials");
           
          printWriter.println("Now we are going to display all info");
@@ -278,7 +332,8 @@ public class TestC {
       }//tryfile
       catch (IOException e) {
          System.out.println("An error occurred while writing to the file: " + e.getMessage());
-      } 
+      } //catch 
+      
    }//main
     
 }//class
